@@ -5,12 +5,17 @@ public class HuntTarget : DefaultTrackableEventHandler {
 
     public GameManager gameManager;
     public Item item;
+    public CollectButton collectButton;
 
     override protected void OnTrackingFound() {
         base.OnTrackingFound();
         if(!item.isCollected) {
-            item.isCollected = true;
-            Debug.Log(item.itemName);
+            collectButton.EnableButton(item);
         }
+    }
+
+    protected override void OnTrackingLost() {
+        base.OnTrackingLost();
+        collectButton.FadeOut();
     }
 }
