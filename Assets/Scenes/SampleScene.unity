@@ -189,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &69175900
 Transform:
   m_ObjectHideFlags: 0
@@ -474,11 +474,11 @@ MonoBehaviour:
     lineCount: 3
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -742,7 +742,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 205768276}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1606555133}
+        m_MethodName: CollectItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &205768276
@@ -860,8 +871,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -909,11 +920,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1558,12 +1569,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 423566801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39863e5faf25fd4bb14739df2f75785, type: 3}
+  m_Script: {fileID: 11500000, guid: e793284322a94a44c9e4a35d29cbaf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _text: 
-  _clueItem: {fileID: 0}
 --- !u!114 &423566804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1844,11 +1852,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1877,11 +1885,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 496472789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 528071d69ab54a645b299198ee187ee6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fa44767733400d4f8c8f16c3eac3808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 404909524}
-  _textMesh: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,12 +2044,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 675506588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba20504f20fe9547819ac13ec1f1f93, type: 3}
+  m_Script: {fileID: 11500000, guid: 896c4df826a78eb48ba8f5dda18ca3aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _text: 
-  _clueItem: {fileID: 0}
 --- !u!114 &675506591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2327,12 +2331,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 681967278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125dd29ebfa1fd3468671c752f42aa4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3abf7a5d57fe57d46ade525b4e083e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _title: 
-  _clueItem: {fileID: 0}
 --- !u!1 &685268396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,7 +2382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5529412}
+  m_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2526,12 +2527,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 769022272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125dd29ebfa1fd3468671c752f42aa4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3abf7a5d57fe57d46ade525b4e083e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _title: 
-  _clueItem: {fileID: 0}
 --- !u!114 &769022275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3203,7 +3201,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 966155864}
+      - m_Target: {fileID: 478680937}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -3392,7 +3390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &966155865
 Transform:
   m_ObjectHideFlags: 0
@@ -3605,12 +3603,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1032715738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39863e5faf25fd4bb14739df2f75785, type: 3}
+  m_Script: {fileID: 11500000, guid: e793284322a94a44c9e4a35d29cbaf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _text: 
-  _clueItem: {fileID: 0}
 --- !u!1 &1052510060
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,12 +3801,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1122602106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba20504f20fe9547819ac13ec1f1f93, type: 3}
+  m_Script: {fileID: 11500000, guid: 896c4df826a78eb48ba8f5dda18ca3aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _text: 
-  _clueItem: {fileID: 0}
 --- !u!1 &1149301914
 GameObject:
   m_ObjectHideFlags: 0
@@ -4176,12 +4168,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1192556142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 125dd29ebfa1fd3468671c752f42aa4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3abf7a5d57fe57d46ade525b4e083e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _title: 
-  _clueItem: {fileID: 0}
 --- !u!114 &1192556145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4822,7 +4811,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1290143934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1156ee759a168d418631c8db53dcd74, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a5b6a76989d5b43a796dd7a3b8ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1840080475}
@@ -4870,12 +4859,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1307198302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39863e5faf25fd4bb14739df2f75785, type: 3}
+  m_Script: {fileID: 11500000, guid: e793284322a94a44c9e4a35d29cbaf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _text: 
-  _clueItem: {fileID: 0}
 --- !u!114 &1307198305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5118,7 +5104,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: OK, I'm Ready!
+  m_text: Check Clues!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5194,11 +5180,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5461,11 +5447,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5532,7 +5518,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1484504417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1156ee759a168d418631c8db53dcd74, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a5b6a76989d5b43a796dd7a3b8ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1454761457}
@@ -5734,7 +5720,7 @@ GameObject:
   - component: {fileID: 1606555131}
   - component: {fileID: 1606555133}
   m_Layer: 0
-  m_Name: Shadow (Button - Start)
+  m_Name: Shadow (Button - Collect Item)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6405,34 +6391,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1691359631}
   m_CullTransparentMesh: 0
---- !u!1 &1716059988
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1716059989}
-  m_Layer: 0
-  m_Name: rounded-info-button_icon-icons.com_72588
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1716059989
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1716059988}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 212.89743, y: 342.01785, z: -704.1655}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1753168757
 GameObject:
   m_ObjectHideFlags: 0
@@ -6479,7 +6437,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1753168757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1156ee759a168d418631c8db53dcd74, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a5b6a76989d5b43a796dd7a3b8ddf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 766082853}
@@ -6632,12 +6590,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1829211575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba20504f20fe9547819ac13ec1f1f93, type: 3}
+  m_Script: {fileID: 11500000, guid: 896c4df826a78eb48ba8f5dda18ca3aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textMeshProUGUI: {fileID: 0}
-  _text: 
-  _clueItem: {fileID: 0}
 --- !u!114 &1829211578
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,48 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class CollectButton : MonoBehaviour {
     private IEnumerator _fadeOut;
-    private List<Renderer> _renderers;
     private Button _button;
     private TextMeshProUGUI _textMeshProUGUI;
+    private Image[] _images;
+    private Item _currentItem;
 
     void Start () {
         _button = transform.GetComponentInChildren<Button>();
         _textMeshProUGUI = transform.GetComponentInChildren<TextMeshProUGUI>();
-
-        AddRenderers();
-        
-
+        _images = transform.GetComponentsInChildren<Image>();
         _button.interactable = false;
 
-        for (int i = 0; i < _renderers.Count; i++) {
-            Color c = _renderers[i].material.color;
-            c.a = 0f;
-            _renderers[i].material.color = c;
-        }
-    }
+        HideButton();
+    }    
 
     public void EnableButton(Item item) {
-        if(!item.isCollected) {
             CancelFadeOut();
             _button.interactable = true;
             _textMeshProUGUI.text = $"Collect {item.itemName}!";
+            _currentItem = item;
             ShowButton();
-        }        
+    }
+
+    public void CollectItem() {
+        if (!_currentItem.isCollected) {
+            _currentItem.isCollected = true;
+            _textMeshProUGUI.text = $"{_currentItem.itemName} Collected!";
+            FadeOut();
+        }
     }
 	
 	public void FadeOut() {
-        _fadeOut = Fade();
-        StartCoroutine(_fadeOut);
-    }
-
-    private void AddRenderers() {
-        Image[] images = transform.GetComponentsInChildren<Image>();
-        for (int i = 0; i < images.Length; i++) {
-            Renderer r = images[i].GetComponent<Renderer>();
-            if(r != null) _renderers.Add(r);
+        if(_currentItem != null && gameObject.activeInHierarchy) {
+            _fadeOut = Fade();
+            StartCoroutine(_fadeOut);
         }
     }
 
@@ -55,22 +51,37 @@ public class CollectButton : MonoBehaviour {
     }
 
     private void ShowButton() {
-        for(int i = 0; i < _renderers.Count; i++) {
-            Color c = _renderers[i].material.color;
-            c.a = 1f;
-            _renderers[i].material.color = c;
-        }        
+        CancelFadeOut();
+        UpdateAlphas(1f);
+    }
+
+    private void HideButton() {
+        UpdateAlphas(0f);
+    }
+
+    private void UpdateAlphas(float alpha) {
+        if (_images != null && _images.Length > 0) {
+            for (int i = 0; i < _images.Length; i++) {
+                Color c = _images[i].color;
+                c.a = alpha;
+                _images[i].color = c;
+            }
+        }
+        if (_textMeshProUGUI != null) {
+            Color c = _textMeshProUGUI.color;
+            c.a = alpha;
+            _textMeshProUGUI.color = c;
+        }
     }
 
     IEnumerator Fade() {
-        for (float f = 1f; f >= 0; f -= 0.1f) {
-            for (int i = 0; i < _renderers.Count; i++) {
-                Color c = _renderers[i].material.color;
-                c.a = f;
-                _renderers[i].material.color = c;
-            }
+        yield return new WaitForSeconds(.5f);
+        for(float alpha = 1f; alpha >= 0; alpha -= 0.01f) {
+            UpdateAlphas(alpha);
             yield return null;
         }
+        HideButton();
+        _currentItem = null;
         _button.interactable = false;
     }
 }
